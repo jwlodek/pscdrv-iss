@@ -1,0 +1,12 @@
+syntax: glob
+bin/*
+db/*
+dbd/*
+as/save/*
+data/*
+include/*
+lib/*
+.git/*
+#*.o
+*~
+

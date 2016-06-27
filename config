@@ -1,0 +1,8 @@
+NAME=pscdrv05
+PORT=5063
+USER=softioc
+HOST=xf08ida-ioc1
+
+CHDIR="$CHDIR/iocBoot/iocpscenc"
+EXEC="$CHDIR/st.cmd"
+
