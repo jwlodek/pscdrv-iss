@@ -29,9 +29,10 @@ dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDA-CT,Dev=Enc09,Chan=4,ID=54")
 dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDA-CT,Dev=Enc09,Chan=DI,ID=55")
 dbLoadRecords("db/EncoderTx.db","Sys=XF:08IDA-CT,Dev=Enc09")
 dbLoadRecords("db/EncoderSts.db","Sys=XF:08IDA-CT,Dev=Enc09")
+dbLoadRecords("db/iocAdminSoft.db","IOC=XF:08IDA-CT{IOC:PB05}")
 
-createPSC("TxEnc09", "10.8.3.39", 7,0)
-createPSC("RxEnc09", "10.8.3.39", 20,1)
+createPSC("TxEnc09", "10.8.3.43", 7,0) 
+createPSC("RxEnc09", "10.8.3.43", 20,1) 
 
 ## Load record instances for xf08id-enc10
 #dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDA-CT,Dev=Enc10,Chan=1,ID=51")
@@ -64,7 +65,7 @@ var(PSCDebug, 2)
 
 iocInit()
 
-dbl > /cf-update/xf08ida-ioc1.pscdrv05.dbl
+#dbl > /cf-update/xf08ida-ioc1.pscdrv05.dbl
 #system "cp records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
 
 ### Save/Restore ###
