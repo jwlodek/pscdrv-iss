@@ -34,6 +34,19 @@ dbLoadRecords("db/iocAdminSoft.db","IOC=XF:08IDA-CT{IOC:PB05}")
 createPSC("TxEnc09", "10.8.3.43", 7,0) 
 createPSC("RxEnc09", "10.8.3.43", 20,1) 
 
+## Load record instances for xf08id-enc20
+#dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDB-CT,Dev=Enc20,Chan=1,ID=51")
+#dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDB-CT,Dev=Enc20,Chan=2,ID=52")
+#dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDB-CT,Dev=Enc20,Chan=3,ID=53")
+#dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDB-CT,Dev=Enc20,Chan=4,ID=54")
+#dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDB-CT,Dev=Enc20,Chan=DI,ID=55")
+#dbLoadRecords("db/EncoderTx.db","Sys=XF:08IDB-CT,Dev=Enc20")
+#dbLoadRecords("db/EncoderSts.db","Sys=XF:08IDB-CT,Dev=Enc20")
+#dbLoadRecords("db/iocAdminSoft.db","IOC=XF:08IDB-CT{IOC:PB06}")
+
+#createPSC("TxEnc20", "10.8.3.50", 7,0)
+#createPSC("RxEnc20", "10.8.3.50", 20,1)
+
 ## Load record instances for xf08id-enc10
 #dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDA-CT,Dev=Enc10,Chan=1,ID=51")
 #dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDA-CT,Dev=Enc10,Chan=2,ID=52")

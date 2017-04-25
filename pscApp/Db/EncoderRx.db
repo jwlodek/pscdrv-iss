@@ -42,8 +42,8 @@ record(waveform, "$(Sys){$(Dev=Enc):$(Chan)}Cnt:Pos_Bin_") {
 
 record(waveform, "$(Sys){$(Dev=Enc):$(Chan)}Data_Bin_") {
 	field(DESC, "Encoder misc diag data")
-        field(DTYP, "PSC Block I16 In")
-        field(INP , "@Rx$(Dev=Enc) $(ID) 14 16")
+        field(DTYP, "PSC Block I8 In")
+        field(INP , "@Rx$(Dev=Enc) $(ID) 15 16")
         field(SCAN, "I/O Intr")
         field(FTVL, "DOUBLE")
         field(NELM, "1024")
@@ -160,3 +160,10 @@ record(waveform, "$(Sys){$(Dev=Enc):$(Chan)}Sts:B-Sts")
         field(NELM, "1024")
         field(FTVL, "UCHAR")
 }
+
+record(stringin, "$(Sys){$(Dev=Enc):$(Chan)}DevName"){
+        field(DTYP, "Soft Channel")
+        field(PINI, "YES")
+        info(autosaveFields_pass0, "VAL")
+}
+
