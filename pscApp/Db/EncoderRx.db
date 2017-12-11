@@ -78,20 +78,22 @@ record(aSub, "$(Sys){$(Dev=Enc):$(Chan)}Format_asub_")
         field(INPE, "$(Sys){$(Dev=Enc):$(Chan)}Data_Bin_.VAL")
         field(FTE,  "DOUBLE")
         field(NOE,  "1024")
-        field(FTG,  "STRING")
+        field(FTG,  "CHAR")
+        field(NOG,  "1024")
   	field(INPG, "$(Sys){$(Dev=Enc):$(Chan)}ID:File.VAL")
         field(DISV, "1")
         field(SDIS, "$(Sys){$(Dev=Enc):$(Chan)}ID:File.UDF")
 	field(OUTA, "$(Sys){$(Dev=Enc):$(Chan)}FileSize PP")
 }
 
-record(stringin, "$(Sys){$(Dev=Enc):$(Chan)}ID:File") {
-	field(DTYP, "Soft Channel")
-	field(INP, "/home/rkadyrov/EncoderData/format_ch$(Chan).out")
-	field(PINI, "YES")
-	field(DISV, "0")	
-	field(SDIS, "$(Sys){$(Dev=Enc):$(Chan)}Ignore-RB")	
-	info(autosaveFields_pass0, "VAL")
+record(waveform, "$(Sys){$(Dev=Enc):$(Chan)}ID:File") {
+        field(DTYP, "Soft Channel")
+        field(INP, "~/EncoderData/format_ch$(Chan).out")
+        field(DISV, "0")
+        field(SDIS, "$(Sys){$(Dev=GP-ADC):$(Chan)}Ena-RB")
+        field(FTVL, "CHAR")
+        field(NELM, "1024")
+        info(autosaveFields_pass0, "VAL")
 }
 
 record(ai, "$(Sys){$(Dev=Enc):$(Chan)}FileSize") {
