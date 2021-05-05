@@ -15,4 +15,5 @@ createPSCUDP("test", "localhost", 8765, 8764)
 ## Load record instances
 dbLoadRecords("../../db/pscudpsim.db","P=TST:")
 
+< /epics/common/xf08ida-ioc1-netsetup.cmd
 iocInit()

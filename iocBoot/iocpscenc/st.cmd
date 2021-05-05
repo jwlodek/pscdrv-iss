@@ -9,8 +9,6 @@ epicsEnvSet("CAPUTLOG","/usr/lib/epics")
 epicsEnvSet("EPICS_BASE","/usr/lib/epics")
 
 epicsEnvSet("IOCNAME", "iocpscenc05")
-epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
-epicsEnvSet("EPICS_CA_ADDR_LIST", "10.8.0.255")
 
 cd ${TOP}
 
@@ -31,8 +29,8 @@ dbLoadRecords("db/EncoderTx.db","Sys=XF:08IDA-CT,Dev=Enc09")
 dbLoadRecords("db/EncoderSts.db","Sys=XF:08IDA-CT,Dev=Enc09")
 dbLoadRecords("db/iocAdminSoft.db","IOC=XF:08IDA-CT{IOC:PB05}")
 
-createPSC("TxEnc09", "10.8.3.43", 7,0) 
-createPSC("RxEnc09", "10.8.3.43", 20,1) 
+createPSC("TxEnc09", "xf08ida-enpb2.nsls2.bnl.local", 7,0) 
+createPSC("RxEnc09", "xf08ida-enpb2.nsls2.bnl.local", 20,1) 
 
 ## Load record instances for xf08id-enc20
 #dbLoadRecords("db/EncoderRx.db","Sys=XF:08IDB-CT,Dev=Enc20,Chan=1,ID=51")
@@ -76,6 +74,7 @@ set_pass0_restoreFile("ioc_values.sav")
 
 var(PSCDebug, 2)
 
+< /epics/common/xf08ida-ioc1-netsetup.cmd
 iocInit()
 
 #dbl > /cf-update/xf08ida-ioc1.pscdrv05.dbl
