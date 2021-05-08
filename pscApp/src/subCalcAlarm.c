@@ -4,6 +4,7 @@
 #include <menuFtype.h>
 #include <dbDefs.h>
 #include <stdio.h>
+#include <string.h>
 #include <errlog.h>
 #include <epicsExport.h>
 

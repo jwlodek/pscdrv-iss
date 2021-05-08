@@ -1,4 +1,3 @@
-epicsEnvSet("ARCH","linux-x86_64-debug")
 epicsEnvSet("IOC","iocpscsim")
 epicsEnvSet("TOP","/epics/iocs/pscdrv05")
 epicsEnvSet("DEVIOCSTATS","/usr/lib/epics")
